@@ -9,4 +9,21 @@
 <?import javafx.scene.layout.FlowPane?>
 <BorderPane fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open"/>
+                <MenuItem text="Save"/>
+                <MenuItem text="Close" onAction="#close"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <FlowPane>
+            <Label text="Massage: "/>
+            <TextField fx:id="textField" onAction="#sendMessage" prefWidth="432"/>
+            <Button text="Enter" onAction="#sendMessage" prefWidth="100"/>
+            <TextArea fx:id="textArea" prefHeight="435"/>
+        </FlowPane>
+    </center>
 </BorderPane>
